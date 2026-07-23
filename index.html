@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Паштет су-вид — Гжель</title>
+  <title>Паштет су-вид — нежный, розовый, без химии</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -14,101 +14,56 @@
       color: #1c2b3a;
       line-height: 1.6;
     }
-    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 840px; margin: 0 auto; padding: 0 24px; }
 
-    /* ─── Pattern overlay (Gzhel border) ─── */
-    .gzhel-bg {
-      position: relative;
-      overflow: hidden;
-    }
-    .gzhel-bg::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231c2b3a' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10z M10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      pointer-events: none;
+    img { max-width: 100%; height: auto; display: block; }
+    .img-wrap {
+      border-radius: 12px; overflow: hidden; margin: 32px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
     }
 
     /* ─── Hero ─── */
     .hero {
       position: relative;
-      padding: 80px 0 60px;
+      padding: 60px 0 0;
       text-align: center;
-      background: linear-gradient(180deg, #e8edf5 0%, #d4deec 100%);
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -2px; left: 0; right: 0;
-      height: 40px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0 40 L600 0 L1200 40 L1200 40 L0 40 Z' fill='%23faf9f8'/%3E%3C/svg%3E") no-repeat bottom;
-      background-size: cover;
+      background: linear-gradient(180deg, #e8edf5 0%, #faf9f8 100%);
     }
     .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 56px;
+      font-size: 40px;
       font-weight: 600;
       color: #14224a;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-    .hero h1 em {
-      font-style: italic;
-      color: #2b5a8a;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .hero .sub {
-      font-size: 17px;
+      font-size: 16px;
       color: #4a6382;
-      margin-bottom: 32px;
-      letter-spacing: 0.3px;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
     }
     .hero .price-badge {
       display: inline-block;
       background: #14224a;
       color: #f0f4fa;
       padding: 10px 32px;
-      border-radius: 0;
       font-size: 19px;
       font-weight: 500;
       letter-spacing: 0.5px;
-      position: relative;
     }
-    .hero .price-badge::before,
-    .hero .price-badge::after {
-      content: '❋';
-      position: absolute;
-      color: #7fa7d4;
-      font-size: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .hero .price-badge::before { left: 10px; }
-    .hero .price-badge::after { right: 10px; }
-
-    /* ─── Gzhel decorative divider ─── */
-    .divider-gzhel {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 40px 0;
-      color: #7fa7d4;
-      font-size: 20px;
-    }
-    .divider-gzhel::before,
-    .divider-gzhel::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #b8cce0, transparent);
-    }
-    .divider-gzhel .flower { display: inline-block; }
 
     /* ─── Sections ─── */
-    section { padding: 40px 0; position: relative; }
+    section { padding: 48px 0; }
     section h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 600;
       color: #14224a;
       text-align: center;
@@ -124,27 +79,22 @@
     }
     section p { font-size: 16px; color: #334558; margin-bottom: 16px; }
 
-    /* ─── Cards ─── */
+    /* ─── Cards (advantages) ─── */
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin: 32px 0;
+      margin: 28px 0;
     }
     .card {
       background: #f4f7fc;
       border: 1px solid #d4e0f0;
-      border-radius: 0;
       padding: 24px 20px;
       text-align: center;
       transition: background .2s;
     }
     .card:hover { background: #ecf2fa; }
-    .card .icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-      display: block;
-    }
+    .card .icon { font-size: 32px; margin-bottom: 8px; display: block; }
     .card h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 20px;
@@ -154,107 +104,102 @@
     }
     .card p { font-size: 14px; color: #4a6382; margin: 0; }
 
-    /* ─── Composition ─── */
-    .composition-box {
-      background: #f4f7fc;
-      border: 1px solid #d4e0f0;
-      padding: 32px 28px;
+    /* ─── Benefits (short) ─── */
+    .benefits-short {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
       margin: 24px 0;
     }
+    .benefits-short .item {
+      background: #f4f7fc;
+      border: 1px solid #d4e0f0;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .benefits-short .item .icon { font-size: 24px; }
+    .benefits-short .item span { font-size: 15px; font-weight: 500; color: #14224a; }
+
+    /* ─── Composition ─── */
     .composition-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
+      margin: 20px 0;
     }
     .composition-list span {
-      background: #fff;
+      background: #f4f7fc;
       border: 1px solid #c8d8ec;
-      padding: 8px 22px;
+      padding: 8px 20px;
       font-size: 15px;
       color: #1c2b3a;
     }
 
-    /* ─── Benefits list ─── */
-    .benefit-grid {
+    /* ─── About ─── */
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+      margin: 28px 0;
+    }
+    .about-wrap .text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: #14224a;
+      margin-bottom: 12px;
+    }
+    .about-wrap .text p {
+      font-size: 15px;
+      color: #4a6382;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    /* ─── Process steps ─── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .process-step {
+      background: #f4f7fc;
+      border: 1px solid #d4e0f0;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .process-step .icon { font-size: 28px; display: block; margin-bottom: 8px; }
+    .process-step .label { font-size: 13px; color: #4a6382; font-weight: 500; }
+
+    /* ─── Reviews ─── */
+    .reviews {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin: 28px 0;
     }
-    .benefit-item {
+    .review-card {
       background: #f4f7fc;
       border: 1px solid #d4e0f0;
-      padding: 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
+      padding: 24px;
     }
-    .benefit-item .icon {
-      font-size: 28px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .benefit-item .text h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: #14224a;
-      margin-bottom: 4px;
-    }
-    .benefit-item .text p {
-      font-size: 13.5px;
-      color: #4a6382;
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    /* ─── Nutrition note ─── */
-    .nutrition-note {
-      background: #14224a;
-      color: #d4e0f0;
-      padding: 28px 24px;
-      margin: 28px 0;
-    }
-    .nutrition-note p {
-      color: #d4e0f0 !important;
-      font-size: 14.5px !important;
-      margin: 0 0 8px !important;
-    }
-    .nutrition-note p:last-child { margin: 0 !important; }
-
-    /* ─── Quote block ─── */
-    .quote-block {
-      background: #f4f7fc;
-      border: 1px solid #d4e0f0;
-      padding: 28px 24px;
-      margin: 28px 0;
-      position: relative;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
+    .review-card .stars { color: #b89a5a; font-size: 16px; margin-bottom: 8px; }
+    .review-card .text {
+      font-size: 14px;
+      color: #334558;
+      line-height: 1.6;
+      margin-bottom: 12px;
       font-style: italic;
-      color: #14224a;
-      line-height: 1.7;
     }
-    .quote-block::before {
-      content: '❝';
-      font-size: 48px;
-      color: #7fa7d4;
-      position: absolute;
-      top: 8px;
-      left: 16px;
-      line-height: 1;
+    .review-card .author {
+      font-size: 13px;
+      color: #6b86a8;
+      font-weight: 500;
     }
-
-    /* ─── Two-column text ─── */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin: 24px 0;
-    }
-    .two-col p { font-size: 15px; margin: 0; }
-    .two-col strong { color: #14224a; }
 
     /* ─── Serve tip ─── */
     .serve-tip {
@@ -262,17 +207,8 @@
       border: 1px solid #d4e0f0;
       padding: 24px;
       margin-top: 24px;
-      position: relative;
     }
-    .serve-tip::before {
-      content: '❋';
-      position: absolute;
-      top: -12px; left: 24px;
-      background: #faf9f8;
-      padding: 0 8px;
-      color: #7fa7d4;
-      font-size: 16px;
-    }
+    .serve-tip strong { color: #14224a; }
 
     /* ─── Order ─── */
     .order {
@@ -281,22 +217,9 @@
       color: #f0f4fa;
       text-align: center;
       padding: 64px 24px;
-      margin-top: 40px;
+      margin-top: 48px;
     }
-    .order::before {
-      content: '';
-      position: absolute;
-      top: -40px; left: 0; right: 0;
-      height: 40px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40'%3E%3Cpath d='M0 0 L600 40 L1200 0 L0 0 Z' fill='%2314224a'/%3E%3C/svg%3E") no-repeat top;
-      background-size: cover;
-    }
-    .order h2 {
-      color: #f0f4fa;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      margin-bottom: 4px;
-    }
+    .order h2 { color: #f0f4fa; font-family: 'Cormorant Garamond', serif; font-size: 34px; margin-bottom: 4px; }
     .order .price-large {
       font-family: 'Cormorant Garamond', serif;
       font-size: 48px;
@@ -304,259 +227,280 @@
       color: #d4e0f0;
     }
     .order .price-desc { color: #8aa9cc; font-size: 15px; }
+    .order .scarcity {
+      color: #b8cce0;
+      font-size: 14px;
+      margin: 20px 0 24px;
+      line-height: 1.7;
+    }
     .order .contact-btn {
       display: inline-block;
-      margin-top: 28px;
       background: transparent;
       color: #d4e0f0;
       text-decoration: none;
-      padding: 14px 52px;
+      padding: 16px 56px;
       border: 1.5px solid #d4e0f0;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 500;
       letter-spacing: 0.5px;
       transition: all .2s;
     }
-    .order .contact-btn:hover {
-      background: #d4e0f0;
-      color: #14224a;
-    }
+    .order .contact-btn:hover { background: #d4e0f0; color: #14224a; }
 
     footer {
       text-align: center;
       padding: 32px 24px;
       font-size: 13px;
       color: #8aa9cc;
-      letter-spacing: 0.3px;
     }
-    footer .flower { color: #7fa7d4; }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 38px; }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 28px; }
       .cards { grid-template-columns: 1fr; }
-      section h2 { font-size: 28px; }
-      .hero { padding: 60px 0 50px; }
+      .benefits-short { grid-template-columns: 1fr; }
+      .about-wrap { grid-template-columns: 1fr; }
+      .reviews { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      section h2 { font-size: 26px; }
+      .hero { padding: 40px 0 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- ============ HERO ============ -->
   <div class="hero">
     <div class="container">
-      <h1>Паштет <em>су-вид</em></h1>
-      <p class="sub">Домашний · Натуральный · Нежный</p>
+      <h1>Попробуйте паштет таким, каким его подают в хороших ресторанах.</h1>
+      <p class="sub">
+        Приготовлен методом су-вид при 65°C. Благодаря этому паштет остаётся
+        невероятно нежным, сохраняет естественный розовый цвет
+        и насыщенный вкус.
+      </p>
       <div class="price-badge">250 мл · 410 ₽</div>
+      <div class="img-wrap">
+        <img src="images/hero.jpg" alt="Паштет су-вид с багетом и клюквенным джемом">
+      </div>
     </div>
   </div>
 
-  <!-- About -->
+  <!-- ============ WHY SPECIAL ============ -->
   <section>
     <div class="container">
-      <h2>Что такое су-вид</h2>
-      <p class="subtitle">Технология деликатного приготовления</p>
-      <p>
-        Sous Vide — готовка в вакууме при невысокой температуре.
-        Куриная печень томится при 65 °C, сохраняя полезные свойства,
-        натуральный цвет и нежнейшую текстуру. Белок не разрушается,
-        витамины остаются внутри.
-      </p>
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="divider-gzhel">
-      <span class="flower">❋</span>
-      <span>❋</span>
-      <span class="flower">❋</span>
-    </div>
-  </div>
-
-  <!-- Why special -->
-  <section style="padding-top:0;">
-    <div class="container">
       <h2>Почему он особенный</h2>
-      <p class="subtitle">Четыре причины влюбиться</p>
+      <p class="subtitle">Четыре причины, которые вы почувствуете с первой ложки</p>
       <div class="cards">
         <div class="card">
-          <span class="icon">🍦</span>
-          <h3>Кремовая текстура</h3>
-          <p>Шелковистая, тающая во рту. Никакой зернистости.</p>
+          <span class="icon">🌸</span>
+          <h3>Натуральный розовый цвет</h3>
+          <p>Естественный оттенок, как у ресторанной закуски. Без красителей.</p>
         </div>
         <div class="card">
-          <span class="icon">🌸</span>
-          <h3>Розовый цвет</h3>
-          <p>Естественный оттенок, как у ресторанной закуски.</p>
+          <span class="icon">🥄</span>
+          <h3>Нежный как мусс</h3>
+          <p>Шелковистая текстура, тает во рту. Никакой зернистости и сухости.</p>
         </div>
         <div class="card">
           <span class="icon">🧈</span>
-          <h3>Чистый вкус</h3>
-          <p>Без горечи и металлического привкуса. Мягкий и сливочный.</p>
+          <h3>Чистый сливочный вкус</h3>
+          <p>Без горечи и металлического привкуса. Мягкий, деликатный.</p>
         </div>
         <div class="card">
           <span class="icon">💧</span>
-          <h3>Сочность</h3>
-          <p>Вакуум сохраняет влагу. Паштет сочный без лишних добавок.</p>
+          <h3>Су-вид 65°C</h3>
+          <p>Щадящая температура сохраняет сочность и полезные свойства.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ TEXTURE PHOTO ============ -->
   <div class="container">
-    <div class="divider-gzhel">
-      <span class="flower">❋</span>
-      <span>❋</span>
-      <span class="flower">❋</span>
+    <div class="img-wrap">
+      <img src="images/texture.jpg" alt="Крупный план текстуры паштета">
     </div>
   </div>
 
-  <!-- Nutrition -->
+  <!-- ============ BENEFITS ============ -->
   <section style="padding-top:0;">
     <div class="container">
-      <h2>Польза и питательность</h2>
-      <p class="subtitle">Настоящий суперфуд в каждой баночке</p>
-      <p>
-        Паштет из куриной печени су-вид — это не только деликатес,
-        но и ценный источник питательных веществ. Благодаря щадящей
-        технологии приготовления все полезные свойства максимально
-        сохраняются.
+      <h2>Польза</h2>
+      <p class="subtitle">Питательно и полезно</p>
+      <div class="benefits-short">
+        <div class="item"><span class="icon">🥩</span><span>Полноценный белок</span></div>
+        <div class="item"><span class="icon">👁️</span><span>Витамин A</span></div>
+        <div class="item"><span class="icon">🧠</span><span>Витамин B12</span></div>
+        <div class="item"><span class="icon">🩸</span><span>Железо</span></div>
+      </div>
+      <p style="text-align:center; font-size:14px; color:#6b86a8; margin:0;">
+        Паштет богат легкоусвояемым белком, железом и витаминами —
+        вкусно и полезно в каждой баночке.
       </p>
-
-      <div class="benefit-grid">
-        <div class="benefit-item">
-          <span class="icon">🥩</span>
-          <div class="text">
-            <h4>Полноценный белок</h4>
-            <p>Легкоусвояемый белок для восстановления тканей, мышечной массы и иммунитета.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">👁️</span>
-          <div class="text">
-            <h4>Витамин A</h4>
-            <p>Поддерживает здоровье кожи, зрения и иммунной системы.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">🧠</span>
-          <div class="text">
-            <h4>B12 и фолиевая кислота</h4>
-            <p>Участвуют в кроветворении и работе нервной системы.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">🩸</span>
-          <div class="text">
-            <h4>Железо</h4>
-            <p>Гемовая форма железа — легко усваивается, профилактика анемии.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">🛡️</span>
-          <div class="text">
-            <h4>Цинк, селен, медь</h4>
-            <p>Необходимы для обмена веществ, защиты клеток и иммунитета.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">⚡</span>
-          <div class="text">
-            <h4>Высокая питательность</h4>
-            <p>Небольшая порция надолго насыщает благодаря белку, жирам, витаминам и минералам.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="nutrition-note">
-        <p><strong>Почему су-вид лучше для печени?</strong></p>
-        <p>
-          Печень очень чувствительна к перегреву. При высокой температуре
-          она становится сухой, плотной и приобретает выраженный печёночный
-          привкус. Су-вид (65 °C) позволяет приготовить её максимально
-          деликатно: сохранить сочность, нежную текстуру, естественный
-          розовый цвет и насыщенный вкус без пересушивания. Жиры меньше
-          окисляются, а термочувствительные витамины лучше сохраняются.
-        </p>
-      </div>
-
-      <div class="quote-block">
-        Паштет из куриной печени су-вид — это сочетание гастрономии
-        и пользы. Он богат легкоусвояемым белком, железом, витаминами
-        A и B12, имеет нежную кремовую текстуру и естественный розовый
-        цвет благодаря деликатной технологии приготовления. Такой паштет
-        станет не только изысканной закуской, но и ценным источником
-        питательных веществ в рационе.
-      </div>
     </div>
   </section>
 
+  <!-- ============ JAR PHOTO ============ -->
   <div class="container">
-    <div class="divider-gzhel">
-      <span class="flower">❋</span>
-      <span>❋</span>
-      <span class="flower">❋</span>
+    <div class="img-wrap">
+      <img src="images/jar.jpg" alt="Баночка паштета су-вид">
     </div>
   </div>
 
-  <!-- Composition -->
+  <!-- ============ COMPOSITION ============ -->
   <section style="padding-top:0;">
     <div class="container">
       <h2>Состав</h2>
-      <p class="subtitle">Всё просто и честно</p>
-      <div class="composition-box">
-        <div class="composition-list">
-          <span>🐓 Куриная печень</span>
-          <span>🌭 Охотничьи колбаски</span>
-          <span>🧅 Лук репчатый</span>
-          <span>🥚 Яйца</span>
-          <span>🧈 Сливочное масло</span>
-        </div>
+      <p class="subtitle">Коротко и честно</p>
+      <div class="composition-list">
+        <span>🐓 Куриная печень</span>
+        <span>🌭 Охотничьи колбаски</span>
+        <span>🧅 Лук репчатый</span>
+        <span>🥚 Яйца</span>
+        <span>🧈 Сливочное масло</span>
       </div>
-      <p style="color:#4a6382; text-align:center;">Никаких консервантов, загустителей и усилителей вкуса</p>
+      <p style="text-align:center; color:#6b86a8; font-size:14px; margin-top:12px;">
+        Никаких консервантов, загустителей и усилителей вкуса
+      </p>
     </div>
   </section>
 
+  <!-- ============ ABOUT ============ -->
+  <section>
+    <div class="container">
+      <h2>Готовлю сама</h2>
+      <p class="subtitle">Небольшое производство с любовью к деталям</p>
+      <div class="about-wrap">
+        <div class="img-wrap" style="margin:0;">
+          <img src="images/author.jpg" alt="Анастасия — автор паштета">
+        </div>
+        <div class="text">
+          <h3>Меня зовут Анастасия</h3>
+          <p>
+            Несколько лет я экспериментировала с технологией су-вид, чтобы
+            приготовить паштет с максимально нежной текстурой и насыщенным
+            вкусом.
+          </p>
+          <p>
+            Сначала готовила его только для семьи и друзей, а теперь
+            небольшими партиями делаю для тех, кто ценит качественные
+            натуральные продукты.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS PHOTO ============ -->
   <div class="container">
-    <div class="divider-gzhel">
-      <span class="flower">❋</span>
-      <span>❋</span>
-      <span class="flower">❋</span>
+    <div class="img-wrap">
+      <img src="images/process.jpg" alt="Процесс приготовления паштета су-вид">
     </div>
   </div>
 
-  <!-- How to serve -->
+  <!-- ============ HOW IT'S MADE ============ -->
   <section style="padding-top:0;">
     <div class="container">
-      <h2>Как подавать</h2>
-      <p class="subtitle">Идеальные сочетания</p>
-      <p>
-        Хрустящий багет или тосты — классика. Добавьте <strong>клюквенный джем</strong>
-        — лёгкая кислинка раскроет вкус ещё ярче. Это сочетание любят
-        в лучших ресторанах.
-      </p>
-      <div class="serve-tip">
-        <strong>🥂 Совет:</strong> подавайте охлаждённым. Перед подачей дайте
-        постоять 10 минут при комнатной температуре — вкус станет ещё насыщеннее.
+      <h2>Как я готовлю</h2>
+      <p class="subtitle">Ручная работа от начала до конца</p>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="icon">🥩</span>
+          <span class="label">Готовлю в вакууме 2 ч при 65°C</span>
+        </div>
+        <div class="process-step">
+          <span class="icon">🔄</span>
+          <span class="label">Измельчаю до кремовой текстуры</span>
+        </div>
+        <div class="process-step">
+          <span class="icon">🫙</span>
+          <span class="label">Раскладываю по баночкам</span>
+        </div>
+        <div class="process-step">
+          <span class="icon">❄️</span>
+          <span class="label">Охлаждаю и отдаю вам</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Order -->
+  <!-- ============ SERVING PHOTO ============ -->
+  <div class="container">
+    <div class="img-wrap">
+      <img src="images/serving.jpg" alt="Подача паштета с багетом и джемом">
+    </div>
+  </div>
+
+  <!-- ============ HOW TO SERVE ============ -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <h2>Как подавать</h2>
+      <p class="subtitle">Классика и не только</p>
+      <p>
+        Хрустящий багет или тосты — идеальная основа. Добавьте
+        <strong>клюквенный джем</strong> — лёгкая кислинка раскроет
+        вкус ещё ярче.
+      </p>
+      <div class="serve-tip">
+        <strong>🥂 Совет:</strong> подавайте охлаждённым. Перед подачей
+        дайте постоять 10 минут при комнатной температуре — вкус станет
+        насыщеннее.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section>
+    <div class="container">
+      <h2>Отзывы</h2>
+      <p class="subtitle">Те, кто уже попробовал</p>
+      <div class="reviews">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="text">«Покупаю уже третий раз. Домашние в восторге, особенно дети. Очень нежный, совсем не похож на магазинный.»</div>
+          <div class="author">— Елена</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="text">«Пробовала много паштетов, этот лучший. Розовый цвет удивляет, текстура как мусс. Буду заказывать ещё.»</div>
+          <div class="author">— Марина</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="text">«Отличный вариант для завтрака. С багетом и джемом — просто бомба. Спасибо за ваш труд!»</div>
+          <div class="author">— Ольга</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <div class="text">«Дарила подругам на праздник — все были в восторге. Красивая подача, очень вкусно. Рекомендую.»</div>
+          <div class="author">— Светлана</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL PHOTO ============ -->
+  <div class="container">
+    <div class="img-wrap">
+      <img src="images/final.jpg" alt="Красивая сервировка паштета">
+    </div>
+  </div>
+
+  <!-- ============ ORDER ============ -->
   <div class="order">
     <div class="container">
       <h2>Заказать</h2>
       <div class="price-large">410 ₽</div>
       <p class="price-desc">Баночка 250 мл</p>
-      <p style="margin-top:16px; color:#b8cce0;">
-        Напишите мне в Telegram — отвечу на вопросы, приму заказ,
-        договоримся о встрече
+      <p class="scarcity">
+        Готовлю небольшими партиями один раз в неделю.<br>
+        Если хотите попробовать — лучше оформить заказ заранее.
       </p>
-      <a href="https://t.me/AnastasiaProd12" class="contact-btn" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a href="https://t.me/AnastasiaProd12" class="contact-btn" target="_blank" rel="noopener">Заказать баночку</a>
     </div>
   </div>
 
   <footer>
-    <span class="flower">❋</span> Паштет су-вид · домашнее производство · Неглиже <span class="flower">❋</span>
+    Паштет су-вид · домашнее производство · Неглиже
   </footer>
 
 </body>

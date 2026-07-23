@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fafbfe"/>
+      <stop offset="100%" stop-color="#e8eef7"/>
+    </linearGradient>
+    <pattern id="dots" width="25" height="25" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.5" fill="#14224a" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+
+  <!-- Outer Gzhel border -->
+  <rect x="12" y="12" width="1576" height="876" fill="none" stroke="#14224a" stroke-width="3" rx="8"/>
+  <rect x="20" y="20" width="1560" height="860" fill="none" stroke="#7fa7d4" stroke-width="1" rx="6"/>
+  <rect x="28" y="28" width="1544" height="844" fill="none" stroke="#d4e0f0" stroke-width="1" rx="4"/>
+
+  <!-- Corner rosettes -->
+  <g transform="translate(100,90) scale(1)" opacity="0.5">
+    <path d="M0,-35 C14,-30 22,-12 18,0 C22,12 14,30 0,35 C-14,30 -22,12 -18,0 C-22,-12 -14,-30 0,-35Z" fill="none" stroke="#7fa7d4" stroke-width="1.5"/>
+    <path d="M0,-22 C9,-18 14,-8 12,0 C14,8 9,18 0,22 C-9,18 -14,8 -12,0 C-14,-8 -9,-18 0,-22Z" fill="#d4e0f0" opacity="0.5"/>
+    <circle cx="0" cy="0" r="5" fill="#7fa7d4" opacity="0.35"/>
+  </g>
+  <g transform="translate(1500,90) scale(-1,1) scale(1)" opacity="0.5">
+    <path d="M0,-35 C14,-30 22,-12 18,0 C22,12 14,30 0,35 C-14,30 -22,12 -18,0 C-22,-12 -14,-30 0,-35Z" fill="none" stroke="#7fa7d4" stroke-width="1.5"/>
+    <path d="M0,-22 C9,-18 14,-8 12,0 C14,8 9,18 0,22 C-9,18 -14,8 -12,0 C-14,-8 -9,-18 0,-22Z" fill="#d4e0f0" opacity="0.5"/>
+    <circle cx="0" cy="0" r="5" fill="#7fa7d4" opacity="0.35"/>
+  </g>
+  <g transform="translate(100,810) scale(1,-1) scale(1)" opacity="0.5">
+    <path d="M0,-35 C14,-30 22,-12 18,0 C22,12 14,30 0,35 C-14,30 -22,12 -18,0 C-22,-12 -14,-30 0,-35Z" fill="none" stroke="#7fa7d4" stroke-width="1.5"/>
+    <path d="M0,-22 C9,-18 14,-8 12,0 C14,8 9,18 0,22 C-9,18 -14,8 -12,0 C-14,-8 -9,-18 0,-22Z" fill="#d4e0f0" opacity="0.5"/>
+    <circle cx="0" cy="0" r="5" fill="#7fa7d4" opacity="0.35"/>
+  </g>
+  <g transform="translate(1500,810) scale(-1,-1) scale(1)" opacity="0.5">
+    <path d="M0,-35 C14,-30 22,-12 18,0 C22,12 14,30 0,35 C-14,30 -22,12 -18,0 C-22,-12 -14,-30 0,-35Z" fill="none" stroke="#7fa7d4" stroke-width="1.5"/>
+    <path d="M0,-22 C9,-18 14,-8 12,0 C14,8 9,18 0,22 C-9,18 -14,8 -12,0 C-14,-8 -9,-18 0,-22Z" fill="#d4e0f0" opacity="0.5"/>
+    <circle cx="0" cy="0" r="5" fill="#7fa7d4" opacity="0.35"/>
+  </g>
+
+  <!-- Top border scroll -->
+  <g opacity="0.35">
+    <path d="M250,50 Q300,35 350,50 Q400,65 450,50 Q500,35 550,50 Q600,65 650,50 Q700,35 750,50 Q800,65 850,50 Q900,35 950,50 Q1000,65 1050,50 Q1100,35 1150,50 Q1200,65 1250,50 Q1300,35 1350,50" fill="none" stroke="#7fa7d4" stroke-width="1.2"/>
+    <path d="M250,55 Q300,70 350,55 Q400,40 450,55 Q500,70 550,55 Q600,40 650,55 Q700,70 750,55 Q800,40 850,55 Q900,70 950,55 Q1000,40 1050,55 Q1100,70 1150,55 Q1200,40 1250,55 Q1300,70 1350,55" fill="none" stroke="#d4e0f0" stroke-width="0.8"/>
+  </g>
+
+  <!-- ============ Title ============ -->
+  <text x="800" y="150" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#14224a" letter-spacing="4" opacity="0.8">ПРОЦЕСС ПРИГОТОВЛЕНИЯ</text>
+  <text x="800" y="180" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#7fa7d4" letter-spacing="3" opacity="0.55">SOUS-VIDE · СМЕШИВАНИЕ · ФАСОВКА</text>
+
+  <g opacity="0.3" transform="translate(620,195)">
+    <path d="M0,0 Q90,10 180,0" fill="none" stroke="#7fa7d4" stroke-width="1"/>
+  </g>
+
+  <!-- ============ Three panels ============ -->
+
+  <!-- PANEL 1: Sous-vide -->
+  <g transform="translate(130, 260)">
+    <!-- Panel background -->
+    <rect x="0" y="0" width="420" height="520" rx="12" fill="#fafbfe" stroke="#d4e0f0" stroke-width="1" opacity="0.7"/>
+
+    <!-- Water bath -->
+    <ellipse cx="210" cy="280" rx="130" ry="20" fill="#d4e0f0" opacity="0.3"/>
+    <rect x="80" y="160" width="260" height="120" rx="10" fill="#fafbfe" stroke="#7fa7d4" stroke-width="1" opacity="0.5"/>
+    <!-- Water effect -->
+    <rect x="85" y="165" width="250" height="65" rx="8" fill="#d4e0f0" opacity="0.2"/>
+    <!-- Bubbles -->
+    <circle cx="130" cy="190" r="4" fill="none" stroke="#7fa7d4" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="200" cy="180" r="3" fill="none" stroke="#7fa7d4" stroke-width="0.5" opacity="0.25"/>
+    <circle cx="280" cy="195" r="5" fill="none" stroke="#7fa7d4" stroke-width="0.5" opacity="0.2"/>
+    <circle cx="160" cy="175" r="2.5" fill="none" stroke="#7fa7d4" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="240" cy="185" r="3.5" fill="none" stroke="#7fa7d4" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- Vacuum bag in water -->
+    <path d="M140,170 Q140,130 180,120 Q210,115 240,120 Q280,130 280,170" fill="#e8eef7" opacity="0.4" stroke="#7fa7d4" stroke-width="0.8"/>
+    <rect x="150" y="130" width="120" height="30" rx="4" fill="#d4e0f0" opacity="0.2"/>
+    <!-- Pâté visible through bag -->
+    <rect x="155" y="133" width="110" height="24" rx="3" fill="#e8eef7" opacity="0.3"/>
+
+    <!-- Sous-vide machine -->
+    <rect x="300" y="180" width="40" height="70" rx="4" fill="#d4e0f0" opacity="0.5" stroke="#7fa7d4" stroke-width="0.8"/>
+    <rect x="310" y="170" width="20" height="15" rx="3" fill="#14224a" opacity="0.1"/>
+    <circle cx="320" cy="200" r="4" fill="#7fa7d4" opacity="0.3"/>
+    <circle cx="320" cy="215" r="4" fill="#7fa7d4" opacity="0.3"/>
+    <circle cx="320" cy="230" r="4" fill="#7fa7d4" opacity="0.3"/>
+
+    <!-- Label -->
+    <text x="210" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#14224a" letter-spacing="2" opacity="0.6">SOUS-VIDE</text>
+    <text x="210" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#7fa7d4" letter-spacing="1" opacity="0.45">ТОМЛЕНИЕ ПРИ 75°C</text>
+
+    <!-- Arrow pointing to step 2 -->
+    <g opacity="0.25">
+      <path d="M410,260 L440,260 L430,250 M440,260 L430,270" fill="none" stroke="#7fa7d4" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- PANEL 2: Blending -->
+  <g transform="translate(590, 260)">
+    <rect x="0" y="0" width="420" height="520" rx="12" fill="#fafbfe" stroke="#d4e0f0" stroke-width="1" opacity="0.7"/>
+
+    <!-- Blender -->
+    <rect x="125" y="220" width="170" height="30" rx="5" fill="#d4e0f0" opacity="0.4"/>
+    <rect x="145" y="160" width="130" height="65" rx="8" fill="#fafbfe" stroke="#7fa7d4" stroke-width="1" opacity="0.6"/>
+    <!-- Pâté inside blender -->
+    <path d="M152,200 Q180,180 210,185 Q240,180 268,200 Q265,218 152,218Z" fill="#e8eef7" opacity="0.4"/>
+    <!-- Blending vortex effect -->
+    <path d="M180,195 Q210,175 240,195" fill="none" stroke="#7fa7d4" stroke-width="1" opacity="0.3"/>
+    <path d="M185,205 Q210,190 235,205" fill="none" stroke="#d4e0f0" stroke-width="0.8" opacity="0.25"/>
+
+    <!-- Motion lines -->
+    <g opacity="0.15">
+      <path d="M160,170 Q200,155 240,170" fill="none" stroke="#14224a" stroke-width="1"/>
+      <path d="M165,165 Q200,148 235,165" fill="none" stroke="#14224a" stroke-width="0.8"/>
+    </g>
+
+    <!-- Lid -->
+    <rect x="155" y="155" width="110" height="10" rx="3" fill="#14224a" opacity="0.08"/>
+    <rect x="195" y="130" width="30" height="28" rx="4" fill="#7fa7d4" opacity="0.15"/>
+
+    <!-- Ingredients scattered -->
+    <g opacity="0.2">
+      <!-- Herbs -->
+      <path d="M100,300 Q110,290 120,295" fill="none" stroke="#7fa7d4" stroke-width="1"/>
+      <path d="M300,310 Q310,300 320,305" fill="none" stroke="#7fa7d4" stroke-width="1"/>
+      <ellipse cx="110" cy="293" rx="3" ry="1.5" fill="#14224a" transform="rotate(15,110,293)"/>
+      <ellipse cx="310" cy="303" rx="3" ry="1.5" fill="#14224a" transform="rotate(-20,310,303)"/>
+      <!-- Garlic -->
+      <circle cx="330" cy="290" r="6" fill="#d4e0f0" stroke="#7fa7d4" stroke-width="0.5"/>
+      <circle cx="330" cy="290" r="2" fill="#7fa7d4" opacity="0.3"/>
+    </g>
+
+    <text x="210" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#14224a" letter-spacing="2" opacity="0.6">БЛЕНДИРОВАНИЕ</text>
+    <text x="210" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#7fa7d4" letter-spacing="1" opacity="0.45">ДО КРЕМОВОЙ ТЕКСТУРЫ</text>
+
+    <!-- Arrow -->
+    <g opacity="0.25">
+      <path d="M410,260 L440,260 L430,250 M440,260 L430,270" fill="none" stroke="#7fa7d4" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- PANEL 3: Jarring -->
+  <g transform="translate(1050, 260)">
+    <rect x="0" y="0" width="420" height="520" rx="12" fill="#fafbfe" stroke="#d4e0f0" stroke-width="1" opacity="0.7"/>
+
+    <!-- Station with multiple jars -->
+    <!-- Big jar center -->
+    <g transform="translate(210,270)">
+      <path d="M-50,-30 Q-58,30 -48,100 Q-44,115 0,115 Q44,115 48,100 Q58,30 50,-30Z" fill="#fafbfe" stroke="#7fa7d4" stroke-width="1" opacity="0.7"/>
+      <path d="M-46,0 Q-52,35 -43,85 Q-40,100 0,100 Q40,100 43,85 Q52,35 46,0Z" fill="#e8eef7" opacity="0.35"/>
+      <ellipse cx="0" cy="-30" rx="48" ry="12" fill="#d4e0f0" opacity="0.3"/>
+      <rect x="-38" y="-60" width="76" height="35" rx="4" fill="#fafbfe" stroke="#d4e0f0" stroke-width="0.8"/>
+      <circle cx="0" cy="-73" r="28" fill="#fafbfe" stroke="#d4e0f0" stroke-width="0.8" opacity="0.6"/>
+      <!-- Pâté surface -->
+      <ellipse cx="0" cy="-30" rx="42" ry="10" fill="#d4e0f0" opacity="0.2"/>
+    </g>
+
+    <!-- Small jar left -->
+    <g transform="translate(130,290) scale(0.55)">
+      <path d="M-50,-30 Q-58,30 -48,100 Q-44,115 0,115 Q44,115 48,100 Q58,30 50,-30Z" fill="#fafbfe" stroke="#d4e0f0" stroke-width="1" opacity="0.6"/>
+      <path d="M-46,0 Q-52,35 -43,85 Q-40,100 0,100 Q40,100 43,85 Q52,35 46,0Z" fill="#e8eef7" opacity="0.3"/>
+      <rect x="-38" y="-60" width="76" height="35" rx="4" fill="#fafbfe" stroke="#d4e0f0" stroke-width="0.8"/>
+      <circle cx="0" cy="-73" r="28" fill="#fafbfe" stroke="#d4e0f0" stroke-width="0.8" opacity="0.5"/>
+    </g>
+
+    <!-- Small jar right -->
+    <g transform="translate(300,295) scale(0.5)">
+      <path d="M-50,-30 Q-58,30 -48,100 Q-44,115 0,115 Q44,115 48,100 Q58,30 50,-30Z" fill="#fafbfe" stroke="#d4e0f0" stroke-width="1" opacity="0.6"/>
+      <rect x="-38" y="-60" width="76" height="35" rx="4" fill="#fafbfe" stroke="#d4e0f0" stroke-width="0.8"/>
+      <circle cx="0" cy="-73" r="28" fill="#fafbfe" stroke="#d4e0f0" stroke-width="0.8" opacity="0.5"/>
+    </g>
+
+    <!-- Labeling / twine details -->
+    <g opacity="0.2">
+      <path d="M165,240 Q175,235 180,240" fill="none" stroke="#7fa7d4" stroke-width="1"/>
+      <path d="M245,240 Q255,235 260,240" fill="none" stroke="#7fa7d4" stroke-width="1"/>
+    </g>
+
+    <!-- Steam / freshness lines -->
+    <g opacity="0.1">
+      <path d="M200,190 Q205,175 200,160" fill="none" stroke="#7fa7d4" stroke-width="0.8"/>
+      <path d="M215,185 Q220,170 215,155" fill="none" stroke="#7fa7d4" stroke-width="0.8"/>
+      <path d="M185,188 Q190,173 185,158" fill="none" stroke="#7fa7d4" stroke-width="0.8"/>
+    </g>
+
+    <text x="210" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#14224a" letter-spacing="2" opacity="0.6">ФАСОВКА</text>
+    <text x="210" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#7fa7d4" letter-spacing="1" opacity="0.45">СТЕРИЛИЗОВАННЫЕ БАНКИ</text>
+  </g>
+
+  <!-- ============ Bottom connecting scroll ============ -->
+  <g opacity="0.15" transform="translate(400,810)">
+    <path d="M0,0 Q200,-15 400,0 Q600,15 800,0" fill="none" stroke="#7fa7d4" stroke-width="1.5"/>
+    <circle cx="200" cy="-5" r="3" fill="#7fa7d4"/>
+    <circle cx="600" cy="5" r="3" fill="#7fa7d4"/>
+  </g>
+
+  <!-- Bottom label -->
+  <rect x="650" y="830" width="300" height="36" rx="18" fill="#14224a" opacity="0.07"/>
+  <text x="800" y="854" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" fill="#14224a" letter-spacing="2" opacity="0.55">ФОТО ПРЕДПРОСМОТР</text>
+</svg>
